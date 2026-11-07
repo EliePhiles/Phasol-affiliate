@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Smart Finds for Everyday Life | The Find Edit</title> <meta name="description" content="The Find Edit researches and curates useful, stylish, affordable products across fashion, beauty, workspaces, and pets."> <link rel="canonical" href="https://www.thefindedit.example/"> <meta property="og:site_name" content="The Find Edit"> <meta property="og:type" content="website"> <meta property="og:title" content="Smart Finds for Everyday Life | The Find Edit"> <meta property="og:description" content="Curated fashion, beauty, workspace essentials, and pet products worth checking out."> <meta property="og:url" content="https://www.thefindedit.example/"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content="Smart Finds for Everyday Life | The Find Edit"> <meta name="twitter:description" content="Curated fashion, beauty, workspace essentials, and pet products worth checking out."> <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script> <style>
+:root{--cream:#FAF7F2;--char:#202020;--blush:#E8B4B8;--sage:#A8B5A2;--sand:#D8C3A5;--muted:#555;--line:#e6dfd3;--white:#fff;
+--serif:"Newsreader","Fraunces",Georgia,serif;--sans:Inter,"DM Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+--t-fashion:#E8B4B8;--t-beauty:#D8C3A5;--t-office:#A8B5A2;--t-pets:#D9B9A0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--char);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.15;margin:0 0 .5em;font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,6vw,3.6rem)}h2{font-size:clamp(1.5rem,3.5vw,2.2rem)}h3{font-size:1.2rem}
+a{color:inherit}
+p{margin:0 0 1em}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid #202020;outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--char);color:#fff;padding:.75rem 1rem;z-index:100}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 1.1rem}
+.sec{padding:2.4rem 0}
+.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#4a4a4a}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.sec-head h2{margin:0}
+.link{font-weight:600;text-decoration:underline;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+/* header */
+header.site{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+.bar{display:flex;align-items:center;gap:.8rem;min-height:68px}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:700;text-decoration:none;white-space:nowrap}
+.logo span{color:#a65f66}
+nav.main{display:none;gap:.1rem;flex-wrap:wrap}
+nav.main a{padding:.6rem .6rem;text-decoration:none;font-size:.9rem;font-weight:500;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}
+nav.main a:hover,nav.main a[aria-current=page]{background:rgba(216,195,165,.5)}
+.sform{margin-left:auto;display:flex;flex:1;max-width:280px}
+.sform input{flex:1;min-width:0;border:1px solid #b9b0a0;border-radius:999px 0 0 999px;padding:0 1rem;min-height:44px;font:inherit;font-size:16px;background:#fff}
+.sform button{border:1px solid var(--char);background:var(--char);color:#fff;border-radius:0 999px 999px 0;min-width:48px;min-height:44px;cursor:pointer}
+.iconbtn{background:none;border:1px solid #b9b0a0;border-radius:10px;min-width:44px;min-height:44px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:inherit;font:inherit}
+#menuBtn{display:inline-flex}
+#mobnav{display:none;border-top:1px solid var(--line);padding:.5rem 0 1rem}
+#mobnav.open{display:block}
+#mobnav a{display:flex;align-items:center;min-height:48px;text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+@media(min-width:1000px){nav.main{display:flex}#menuBtn,#mobnav{display:none!important}}
+@media(max-width:560px){.bar{flex-wrap:wrap;padding:.5rem 0}.sform{order:3;max-width:none;flex-basis:100%}#menuBtn{margin-left:auto}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:44px;padding:.6rem 1.2rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--char);cursor:pointer;font:inherit;font-weight:600;font-size:.95rem;text-align:center}
+.btn.pri{background:var(--char);color:#fff}.btn.pri:hover{background:#3a3a3a}
+.btn.sec2{background:transparent;color:var(--char)}.btn.sec2:hover{background:rgba(216,195,165,.45)}
+.btn.sm{min-height:44px;padding:.5rem .9rem;font-size:.85rem}
+/* hero */
+.hero{display:grid;gap:2rem;padding:2.2rem 0;align-items:center}
+.hero p.lead{font-size:1.1rem;max-width:34em;color:#3a3a3a}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,48px);gap:.7rem}
+.collage .art:nth-child(1){grid-row:1/5}.collage .art:nth-child(2){grid-row:1/3}.collage .art:nth-child(3){grid-row:3/7}.collage .art:nth-child(4){grid-row:5/7}
+@media(min-width:900px){.hero{grid-template-columns:1.1fr 1fr}.collage{grid-template-rows:repeat(6,62px)}}
+.art{border-radius:16px;overflow:hidden;position:relative;background:var(--sand)}
+.art svg{display:block;width:100%;height:100%}
+.pagehero{padding:2.2rem 0 1.4rem}
+.catband{border-radius:22px;padding:2rem 1.4rem;margin:1.2rem 0}
+.catband p{max-width:38em}
+/* grids */
+.grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.grid.p{grid-template-columns:repeat(2,1fr);gap:.8rem}
+@media(min-width:620px){.grid.c3{grid-template-columns:repeat(2,1fr)}.grid.c4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid.p{grid-template-columns:repeat(4,1fr);gap:1.2rem}.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:420px){.grid.p{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .art{border-radius:0;aspect-ratio:4/5}
+.card .body{padding:.9rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card h3{font-size:1.05rem;margin:0}
+.card h3 a{text-decoration:none}.card h3 a:hover{text-decoration:underline}
+.card .cat{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#4a4a4a}
+.card .desc{font-size:.88rem;color:#3d3d3d;margin:0}
+.price{font-size:.82rem;color:var(--muted);font-style:italic}
+.actions{margin-top:auto;display:flex;flex-direction:column;gap:.4rem;padding-top:.5rem}
+.badge{position:absolute;left:10px;top:10px;background:var(--char);color:#fff;font-size:.72rem;font-weight:700;padding:.25rem .6rem;border-radius:999px;z-index:2}
+.ph{font-size:.7rem;color:#555}
+.catcard{border-radius:20px;padding:1.4rem;text-decoration:none;display:flex;flex-direction:column;gap:.4rem;min-height:210px;justify-content:flex-end;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.06)}
+.catcard h3{font-size:1.5rem;margin:0}.catcard p{margin:0;font-size:.92rem}
+.catcard:hover{transform:translateY(-2px)}
+.catcard .big{position:absolute;right:-20px;top:-20px;width:130px;opacity:.5}
+.colcard{border-radius:18px;padding:1.2rem;text-decoration:none;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:.5rem;min-height:150px}
+.colcard h3{margin:0}.colcard p{margin:0;font-size:.9rem;color:#3d3d3d}
+.colcard .strip{height:8px;border-radius:8px;width:60px}
+.artcard .meta{font-size:.78rem;color:var(--muted)}
+.discover{display:flex;gap:.6rem;overflow-x:auto;padding:.3rem 0 .8rem;scrollbar-width:thin}
+.discover a{flex:0 0 auto;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.65rem 1.1rem;min-height:44px;display:inline-flex;align-items:center;font-weight:600;font-size:.9rem}
+.discover a:hover{background:var(--sand)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.chip{border:1px solid #b9b0a0;background:#fff;border-radius:999px;min-height:44px;padding:.4rem 1rem;cursor:pointer;font:inherit;font-size:.88rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center}
+.chip[aria-pressed=true],.chip.on{background:var(--char);color:#fff;border-color:var(--char)}
+.subnav{display:flex;gap:.5rem;overflow-x:auto;padding:.4rem 0}
+.disc{font-size:.82rem;color:#3d3d3d;background:rgba(216,195,165,.35);border-radius:12px;padding:.7rem 1rem;margin:1rem 0}
+.crumbs{font-size:.82rem;padding:.9rem 0 0;color:var(--muted)}
+.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem;margin:0;padding:0}
+.crumbs li+li::before{content:"/";margin-right:.3rem}
+.crumbs a{min-height:24px;display:inline-block}
+.band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* listing/filter */
+.lay{display:grid;gap:1.2rem}
+@media(min-width:1000px){.lay{grid-template-columns:240px 1fr}}
+.filters{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1rem;font-size:.9rem}
+.filters label{display:block;font-weight:600;margin:.7rem 0 .25rem}
+.filters select,.filters input[type=search]{width:100%;min-height:44px;font:inherit;font-size:16px;border:1px solid #b9b0a0;border-radius:10px;padding:0 .6rem;background:#fff}
+.filters .chk{display:flex;align-items:center;gap:.6rem;min-height:44px;font-weight:500;margin:0}
+.filters .chk input{width:22px;height:22px}
+.fbtn{display:inline-flex}
+@media(min-width:1000px){.fbtn,.fclose{display:none!important}}
+@media(max-width:999px){.filters{position:fixed;inset:0 0 0 auto;width:min(340px,90vw);z-index:60;transform:translateX(105%);transition:transform .25s;overflow:auto;border-radius:16px 0 0 16px}.filters.open{transform:none}
+.scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:55}.scrim.open{display:block}}
+.empty{padding:2rem;text-align:center;background:#fff;border:1px dashed #b9b0a0;border-radius:16px}
+/* product detail */
+.pd{display:grid;gap:1.6rem}
+@media(min-width:900px){.pd{grid-template-columns:1fr 1.1fr}}
+.pd .art{aspect-ratio:1/1}
+.cols2{display:grid;gap:1rem}
+@media(min-width:700px){.cols2{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+.box ul{margin:0;padding-left:1.1rem}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.2rem 1rem;margin-bottom:.5rem}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+/* article */
+.artlay{display:grid;gap:2rem}
+@media(min-width:1000px){.artlay{grid-template-columns:1fr 300px}}
+.prose{max-width:70ch}
+.prose h2{margin-top:1.6em}
+.toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem}
+.toc ol{margin:.4rem 0 0;padding-left:1.2rem}.toc a{display:inline-block;min-height:30px}
+.pin{aspect-ratio:2/3;max-width:300px;border-radius:16px;overflow:hidden;position:relative;margin:1rem 0;background:var(--sand)}
+.pin .art{position:absolute;inset:0;border-radius:0}
+.pin .cap{position:absolute;left:0;right:0;bottom:0;padding:1rem;background:linear-gradient(transparent,rgba(250,247,242,.95) 40%);font-family:var(--serif);font-weight:600;font-size:1.1rem}
+.share{display:flex;gap:.5rem;flex-wrap:wrap}
+form.contact{display:grid;gap:.8rem;max-width:560px}
+form.contact input,form.contact textarea,form.contact select{font:inherit;font-size:16px;border:1px solid #b9b0a0;border-radius:10px;padding:.7rem;min-height:44px;width:100%;background:#fff}
+form.contact label{font-weight:600;display:grid;gap:.3rem}
+pre{background:#202020;color:#f4efe6;padding:1rem;border-radius:12px;overflow:auto;font-size:.8rem}
+footer.site{background:var(--char);color:#eee;margin-top:3rem;padding:2.5rem 0 1.5rem}
+footer.site a{color:#f2e9da;text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+footer.site a:hover{text-decoration:underline}
+footer.site h4{font-family:var(--sans);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sand);margin-bottom:.4rem}
+.fgrid{display:grid;gap:1.5rem;grid-template-columns:1fr 1fr}
+@media(min-width:900px){.fgrid{grid-template-columns:1.6fr 1fr 1fr 1fr 1fr}}
+.fgrid>div:first-child{grid-column:1/-1}@media(min-width:900px){.fgrid>div:first-child{grid-column:auto}}
+.fgrid ul{list-style:none;padding:0;margin:0}
+.legal{border-top:1px solid #444;margin-top:1.5rem;padding-top:1rem;font-size:.85rem;color:#ddd}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--char);color:#fff;padding:.7rem 1.1rem;border-radius:999px;z-index:90;font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style></head> <body><a class="skip" href="#main">Skip to main content</a> <header class="site"><div class="wrap"><div class="bar"><a class="logo" href="#/" aria-label="The Find Edit home">The Find <span>Edit</span></a> <nav id="navMain" class="main" aria-label="Primary"></nav> <form id="sform" class="sform" role="search" aria-label="Site search"><input id="sq" type="search" placeholder="Search finds…" aria-label="Search products and articles" autocomplete="off"> <button type="submit" aria-label="Search"><i data-lucide="search" style="width:18px;height:18px"></i></button></form> <button id="menuBtn" class="iconbtn" aria-expanded="false" aria-controls="mobnav" aria-label="Open menu"><i data-lucide="menu" style="width:22px;height:22px"></i></button></div> <nav id="mobnav" aria-label="Mobile"></nav></div></header> <main id="main" tabindex="-1"></main> <footer class="site"><div class="wrap"><div class="fgrid"><div><a class="logo" href="#/" style="color:#fff">The Find Edit</a><p style="max-width:32em">Smart Finds for Everyday Life. We research and curate useful, stylish, and affordable products across fashion, beauty, workspaces, and pets.</p></div> <div><h4>Shop</h4><ul><li><a href="#/fashion">Fashion</a></li><li><a href="#/beauty">Beauty</a></li><li><a href="#/office">Office</a></li><li><a href="#/pets">Pets</a></li></ul></div> <div><h4>Discover</h4><ul><li><a href="#/best-sellers">Best Sellers</a></li><li><a href="#/budget-finds">Budget Finds</a></li><li><a href="#/collections">Collections</a></li><li><a href="#/blog">Blog</a></li></ul></div> <div><h4>Company</h4><ul><li><a href="#/about">About</a></li><li><a href="#/contact">Contact</a></li><li><a href="#/launch-notes">Launch notes</a></li></ul></div> <div><h4>Legal</h4><ul><li><a href="#/privacy">Privacy Policy</a></li><li><a href="#/terms">Terms</a></li><li><a href="#/affiliate-disclosure">Affiliate Disclosure</a></li></ul></div></div> <div class="legal"><strong>As an Amazon Associate I earn from qualifying purchases.</strong><br>Product names, brands and trademarks belong to their owners. © 2026 The Find Edit.</div></div></footer> <div id="scrim" class="scrim"></div> <noscript><div class="wrap"><p>The Find Edit needs JavaScript to browse the catalog. Our categories: Fashion, Beauty, Office &amp; Workspace, and Pets.</p></div></noscript> <script>
+/* =====================================================================
+   HOW TO ADD A PRODUCT
+   1. Add a row to PRODUCTS via P(...) below (unique id + slug, category key
+      fashion|beauty|office|pets, a subcategory from CATEGORIES[x].subs).
+   2. Add its real Amazon URL to AFFILIATE_LINKS[id] (the tag is appended
+      automatically from AFFILIATE_TAG). Never invent price/rating: leave null
+      until you have verified data; the card then says "Check current price on Amazon".
+   3. Replace art (inline SVG) with an <img> only when you have a licensed image.
+   HOW TO ADD AN ARTICLE
+   Add an object to ARTICLES (slug, title, seoTitle, meta, category, type, author,
+   published, updated, excerpt, intro, sections[{h,p,products:[ids]}]). It appears in
+   the Journal, related posts, TOC and sitemap automatically.
+   ===================================================================== */
+const SITE={name:'The Find Edit',tagline:'Smart Finds for Everyday Life',base:'https://www.thefindedit.example'};
+const AFFILIATE_TAG='YOURTAG-20'; /* single affiliate tag — replace with your Associates tag */
+
+/* ---------- DATA: CATEGORIES ---------- */
+const CATEGORIES={
+ fashion:{key:'fashion',name:'Fashion',nav:'Fashion',tag:'Style worth discovering.',tint:'#E8B4B8',subs:["Women's Fashion","Men's Fashion","Shoes","Bags","Accessories","Jewelry","Seasonal Finds","Budget Fashion"]},
+ beauty:{key:'beauty',name:'Beauty',nav:'Beauty',tag:'Beauty favorites and everyday essentials.',tint:'#D8C3A5',subs:["Skincare","Hair Care","Makeup","Beauty Tools","Nail Care","Grooming","Self Care","Budget Beauty"]},
+ office:{key:'office',name:'Office & Workspace',nav:'Office',tag:'Upgrade your desk and workday.',tint:'#A8B5A2',subs:["Desk Accessories","Office Furniture","Ergonomics","Organization","Lighting","Electronics","Work-from-Home","Productivity"]},
+ pets:{key:'pets',name:'Pets',nav:'Pets',tag:'Great finds for your favorite companions.',tint:'#D9B9A0',subs:["Dogs","Cats","Beds","Toys","Feeding","Grooming","Travel","Training","Pet Tech"]}
+};
+const BADGES=['Top Pick','Trending','Budget Find',"Editor's Pick",'Popular','Gift Idea'];
+
+/* ---------- DATA: PRODUCTS (SAMPLE PLACEHOLDERS — not real listings) ---------- */
+const DEF={
+ fashion:{pros:['Versatile styling for everyday outfits','Easy to pair with pieces you already own'],cons:['Sizing and fit vary by brand — check the size guide','Materials differ by listing; read the details'],faq:[['Is this a real listing?','This is a sample placeholder. Replace it with a real product before launch.'],['How do I check sizing?','Use the size chart on the Amazon listing before ordering.']]},
+ beauty:{pros:['Fits into a simple everyday routine','Easy to find, with plenty of shopper feedback on Amazon'],cons:['Skin and hair types differ — check ingredients','Review the full ingredient list on the listing'],faq:[['Is this a real listing?','This is a sample placeholder. Replace it with a real product before launch.'],['Should I patch test?','For skincare, check ingredients and follow the maker’s directions.']]},
+ office:{pros:['Practical upgrade for a daily workspace','Compact items suit small desks'],cons:['Check dimensions against your desk','Compatibility varies — read the specs'],faq:[['Is this a real listing?','This is a sample placeholder. Replace it with a real product before launch.'],['How do I check it fits my desk?','Compare the listing’s dimensions to your space.']]},
+ pets:{pros:['Designed around everyday pet routines','Suits many households as a starting point'],cons:['Pet sizes and habits vary — check size guidance','Supervise new items with your pet'],faq:[['Is this a real listing?','This is a sample placeholder. Replace it with a real product before launch.'],['Is it right for my pet?','Check size and age guidance on the listing and ask your vet if unsure.']]}
+};
+const PRODUCTS=[];
+function P(id,cat,sub,title,desc,badge,feat,budget,pop,type,tags,best){
+ const d=DEF[cat];
+ PRODUCTS.push({id,slug:title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),title,category:cat,subcategory:sub,description:desc,badge,image:null,rating:null,price:null,featured:feat,budgetPick:budget,popularity:pop,type,tags:tags||[],bestFor:best,pros:d.pros,cons:d.cons,faq:d.faq,placeholder:true});
+}
+P('f1','fashion','Bags','Structured Everyday Tote','A roomy, structured tote shape that can carry a laptop and daily essentials.','Top Pick',true,false,96,'Bag',['trending','new'],'Commuters and anyone who carries a lot');
+P('f2','fashion','Accessories','Classic Everyday Belt','A simple, versatile belt that works across casual and work outfits.','Budget Find',false,true,70,'Accessory',['gift'],'Building a basic wardrobe on a budget');
+P('f3','fashion','Shoes','Clean White Sneakers','A minimalist sneaker style that pairs with most casual looks.','Popular',true,false,92,'Shoes',['trending'],'Everyday casual outfits');
+P('f4','fashion','Jewelry','Layered Chain Necklace Set','A mix-and-match necklace set for easy layering.','Gift Idea',false,true,84,'Jewelry',['gift','new'],'Gift giving and easy styling');
+P('f5',"fashion","Men's Fashion",'Lightweight Linen-Blend Shirt','A breathable, relaxed shirt style for warmer days.','Trending',false,false,80,'Clothing',['trending'],'Warm-weather casual wear');
+P('f6','fashion','Budget Fashion','Soft Scrunchie Set','A multi-pack of hair ties that adds a polished touch for little spend.','Budget Find',false,true,66,'Accessory',['gift'],'Small, low-cost style upgrades');
+P('b1','beauty','Skincare','Gentle Hydrating Cleanser','A simple, hydrating-style cleanser for a basic daily routine.','Top Pick',true,false,95,'Skincare',['trending'],'Anyone building a simple routine');
+P('b2','beauty','Hair Care','Heatless Curl Set','A heat-free way to style curls overnight.','Trending',true,false,90,'Hair tool',['trending','new'],'Low-heat styling fans');
+P('b3','beauty','Makeup','Makeup Sponge Set','A multi-pack of blending sponges for everyday makeup.','Budget Find',false,true,72,'Makeup tool',[],'Makeup beginners');
+P('b4','beauty','Beauty Tools','Facial Roller Set','A facial roller and gua sha pairing for a relaxing self-care moment.','Gift Idea',false,false,78,'Beauty tool',['gift'],'Self-care gifts');
+P('b5','beauty','Nail Care','At-Home Nail Care Kit','A compact kit of nail essentials for tidy at-home manicures.','Budget Find',false,true,64,'Nail kit',['new'],'DIY manicure lovers');
+P('b6','beauty','Self Care','Bath Soak Gift Set','A relaxing bath-time set that suits gifting.','Gift Idea',false,false,75,'Gift set',['gift'],'Gifts and wind-down evenings');
+P('o1','office','Ergonomics','Adjustable Laptop Stand','A foldable stand that raises your laptop closer to eye level.','Top Pick',true,false,98,'Stand',['trending'],'Laptop users working long days');
+P('o2','office','Organization','Desk Organizer Tray Set','A stackable tray set to sort pens, notes and small items.','Budget Find',false,true,74,'Organizer',[],'Cluttered desks');
+P('o3','office','Lighting','LED Desk Lamp','A dimmable-style desk lamp for focused task lighting.','Popular',true,false,91,'Lamp',['trending'],'Evening work and study');
+P('o4','office','Electronics','Wireless Mouse','A compact wireless mouse for everyday computing.','Trending',false,false,86,'Electronics',['trending','gift'],'Everyday laptop setups');
+P('o5','office','Desk Accessories','Cable Management Box','A tidy way to hide power strips and cables.','Budget Find',false,true,68,'Organizer',['new'],'Messy cable corners');
+P('o6','office','Work-from-Home','Under-Desk Footrest','A footrest to help you find a more comfortable seated position.','Editor\'s Pick',false,false,77,'Ergonomic',['new'],'Long hours at a desk');
+P('p1','pets','Beds','Orthopedic-Style Dog Bed','A cushioned bed designed to give dogs a supportive place to rest.','Top Pick',true,false,94,'Bed',['trending'],'Dogs who love to nap');
+P('p2','pets','Feeding','Slow-Feeder Bowl','A maze-style bowl that encourages slower mealtimes.','Budget Find',false,true,73,'Feeding',[],'Fast eaters');
+P('p3','pets','Toys','Interactive Cat Wand','A wand toy for play sessions with your cat.','Trending',false,true,88,'Toy',['trending','gift'],'Playful cats');
+P('p4','pets','Travel','Collapsible Travel Bowl','A packable bowl for walks and road trips.','Budget Find',false,true,65,'Travel',[],'Hikes and car rides');
+P('p5','pets','Grooming','Pet Grooming Glove','A glove-style brush for easy at-home grooming.','Popular',true,false,82,'Grooming',[],'Pets who dislike brushes');
+P('p6','pets','Training','Treat Training Pouch','A hands-free pouch to keep treats close during training.','Editor\'s Pick',false,false,69,'Training',['new'],'New puppy owners');
+P('p7','pets','Pet Tech','Pet Water Fountain','A circulating fountain to encourage fresh-water sipping.','Trending',false,false,85,'Pet tech',['trending','gift'],'Pet owners who want fresh water on tap');
+
+/* ---------- DATA: AFFILIATE_LINKS (separate from products) ---------- */
+const AFFILIATE_LINKS={};
+PRODUCTS.forEach(p=>AFFILIATE_LINKS[p.id]='https://www.amazon.com/dp/PLACEHOLDER');
+function affUrl(id){const b=AFFILIATE_LINKS[id]||'https://www.amazon.com/';return b+(b.includes('?')?'&':'?')+'tag='+encodeURIComponent(AFFILIATE_TAG);}
+
+/* ---------- DATA: COLLECTIONS ---------- */
+const COLLECTIONS=[
+ {slug:'best-finds-under-25',title:'Best Finds Under $25',desc:'Budget-friendly picks worth a look across every department. Check current prices on Amazon.',tint:'#A8B5A2',ids:['f2','f4','f6','b3','b5','o2','o5','p2','p3','p4']},
+ {slug:'amazon-favorites',title:'Amazon Favorites',desc:'Items that rank high in our popularity ordering for shoppers.',tint:'#E8B4B8',ids:['o1','b1','f1','p1','o3','f3','b2','p5']},
+ {slug:'work-from-home-upgrades',title:'Work-from-Home Upgrades',desc:'Desk and workday upgrades for a more comfortable setup.',tint:'#A8B5A2',ids:['o1','o3','o4','o5','o6','o2']},
+ {slug:'beauty-finds-worth-trying',title:'Beauty Finds Worth Trying',desc:'Skincare, hair and self-care finds we researched and curated.',tint:'#D8C3A5',ids:['b1','b2','b3','b4','b5','b6']},
+ {slug:'pet-owner-favorites',title:'Pet Owner Favorites',desc:'Useful finds for dogs and cats, from beds to bowls.',tint:'#D9B9A0',ids:['p1','p2','p3','p4','p5','p6','p7']},
+ {slug:'affordable-fashion-finds',title:'Affordable Fashion Finds',desc:'Wardrobe-friendly pieces and accessories on the budget side.',tint:'#E8B4B8',ids:['f2','f3','f4','f6','f5']},
+ {slug:'gift-worthy-finds',title:'Gift-Worthy Finds',desc:'Giftable picks across fashion, beauty, office and pets.',tint:'#D8C3A5',ids:['f4','b4','b6','o4','p3','p7','f2']}
+];
+
+/* ---------- DATA: ARTICLES ---------- */
+const AUTHOR='The Find Edit Editorial Team';
+function S(h,p,products){return {h,p,products:products||[]};}
+const ARTICLES=[
+ {slug:'amazon-fashion-finds-that-look-more-expensive',title:'15 Amazon Fashion Finds That Look More Expensive Than They Are',seoTitle:'Amazon Fashion Finds That Look Expensive',meta:'Sample fashion picks researched and curated for a polished look without a big spend.',category:'fashion',type:'Top 10 Lists',author:AUTHOR,published:'2026-10-02',updated:'2026-10-20',
+  excerpt:'Polished-looking pieces we researched and curated for easy outfit upgrades.',intro:'Looking put-together does not need a big budget. This sample article shows how we organize fashion picks: by how a piece styles, not by hype. Placeholder products below stand in for the final list.',
+  sections:[S('Start with a structure','Structured shapes often read as polished. A tote is a simple example of a piece that lifts a casual outfit.',['f1']),S('Simple accessories do the work','Belts and hair accessories are low-commitment ways to refresh what you own.',['f2','f6']),S('Layer your jewelry','Layered necklaces add texture. Check materials and care details on each listing.',['f4']),S('Keep shoes clean and simple','Minimalist sneakers pair with many outfits. Always check the size guide.',['f3'])]},
+ {slug:'beauty-products-worth-adding-to-your-routine',title:'10 Beauty Products Worth Adding to Your Routine',seoTitle:'Beauty Products Worth Adding to Your Routine',meta:'A researched and curated sample list of beauty essentials and tools for an everyday routine.',category:'beauty',type:'Top 10 Lists',author:AUTHOR,published:'2026-09-28',updated:'2026-10-18',
+  excerpt:'Everyday beauty essentials and tools, curated from research.',intro:'A good routine is usually simple. We look at ingredient lists, product descriptions, and shopper feedback on Amazon, and we do not claim to have tested these items ourselves.',
+  sections:[S('Begin with a cleanser','A gentle cleanser is a common starting point. Compare ingredients to your needs.',['b1']),S('Try low-heat hair styling','Heat-free options can be a lower-effort way to style.',['b2']),S('Tools for makeup and nails','Small tools can make routines smoother.',['b3','b5']),S('Make time for self care','Rollers and bath sets suit relaxing evenings and gifting.',['b4','b6'])]},
+ {slug:'best-desk-accessories-for-a-cleaner-workspace',title:'Best Desk Accessories for a Cleaner Workspace',seoTitle:'Best Desk Accessories for a Cleaner Workspace',meta:'Organizers and desk accessories curated to help reduce clutter.',category:'office',type:'Best Products',author:AUTHOR,published:'2026-09-20',updated:'2026-10-10',
+  excerpt:'Organizers, cable solutions and more for a tidy desk.',intro:'A cleaner desk starts with a place for everything. These sample picks are organized by the problem they solve.',
+  sections:[S('Corral small items','Trays keep pens and notes within reach.',['o2']),S('Hide the cables','A cable box tucks away power strips.',['o5']),S('Add focused light','Task lighting helps your desk feel intentional.',['o3'])]},
+ {slug:'useful-products-for-dog-owners',title:'12 Useful Products for Dog Owners',seoTitle:'Useful Products for Dog Owners',meta:'Researched and curated sample products dog owners may find useful.',category:'pets',type:'Top 10 Lists',author:AUTHOR,published:'2026-09-12',updated:'2026-10-05',
+  excerpt:'Beds, bowls, grooming and training finds for dog households.',intro:'Every dog is different, so we focus on features and sizing guidance. Always check the listing and ask your vet about health questions.',
+  sections:[S('A place to rest','A supportive bed gives your dog a spot of their own.',['p1']),S('Mealtime and travel','Feeding and travel bowls make routines easier.',['p2','p4']),S('Grooming and training','Simple tools help with brushing and treat rewards.',['p5','p6'])]},
+ {slug:'best-amazon-finds-under-25',title:'Best Amazon Finds Under $25',seoTitle:'Best Amazon Finds Under $25',meta:'Budget-friendly sample finds across categories. Always check current price on Amazon.',category:'budget',type:'Budget Finds',author:AUTHOR,published:'2026-10-15',updated:'2026-10-25',
+  excerpt:'Budget-minded picks across fashion, beauty, office and pets.',intro:'Prices change often, so we do not list them. Open each listing to confirm the current price before you buy.',
+  sections:[S('Style on a budget','Small accessories can refresh outfits.',['f2','f6']),S('Beauty and self care','Simple tools for everyday routines.',['b3','b5']),S('Workspace and pets','Organization and pet basics.',['o5','p2','p3'])]},
+ {slug:'home-office-upgrades-for-comfort',title:'Home Office Upgrades That Make Working More Comfortable',seoTitle:'Home Office Upgrades for More Comfortable Work',meta:'Ergonomic and comfort-focused home office ideas, researched and curated.',category:'office',type:'Buying Guides',author:AUTHOR,published:'2026-10-08',updated:'2026-10-22',
+  excerpt:'Ergonomic ideas to make long workdays more comfortable.',intro:'This is not medical advice. If you have pain or health concerns, talk to a professional. Here are comfort-minded ideas worth considering.',
+  sections:[S('Raise your screen','A laptop stand can bring a screen closer to eye level.',['o1']),S('Support your feet','A footrest may help with seated positioning.',['o6']),S('Upgrade your peripherals','A wireless mouse offers flexibility at your desk.',['o4'])]}
+];
+const JOURNAL_TYPES=['Best Products','Top 10 Lists','Comparisons','Buying Guides','Gift Guides','Budget Finds','Seasonal Guides','How-To Articles','Trends'];
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const e=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const byId=id=>PRODUCTS.find(p=>p.id===id);
+const bySlug=s=>PRODUCTS.find(p=>p.slug===s);
+const catName=k=>CATEGORIES[k]?CATEGORIES[k].name:'Budget Finds';
+const tint=k=>CATEGORIES[k]?CATEGORIES[k].tint:'#D8C3A5';
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+function trackEvent(name,props){ /* privacy-conscious stub: no cookies, no third-party. Wire to a privacy-friendly analytics tool later. */ try{console.debug('[trackEvent]',name,props||{});}catch(_){}}
+function hash(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h);}
+/* Inline SVG art (no external images). */
+function art(seed,cat,label){
+ const h=hash(seed),t=tint(cat),sh=['#FAF7F2','#202020','#ffffff'];
+ const a=h%60+20,b=(h>>3)%50+20,c=(h>>5)%4;
+ const shapes=[`<circle cx="${a+20}" cy="${b+20}" r="${25+h%18}" fill="${sh[0]}" opacity=".75"/><rect x="${b}" y="${a+50}" width="${60+h%30}" height="${70+h%30}" rx="${10+c*8}" fill="${sh[2]}" opacity=".85"/>`,
+ `<rect x="${a}" y="${b}" width="${70+h%30}" height="${70+h%30}" rx="${c*14}" fill="${sh[2]}" opacity=".85"/><circle cx="${b+80}" cy="${a+90}" r="30" fill="${sh[1]}" opacity=".12"/>`,
+ `<path d="M10 150 Q ${a+40} ${b} 190 140 L190 200 L10 200Z" fill="${sh[2]}" opacity=".8"/><circle cx="${a+60}" cy="${b+30}" r="22" fill="${sh[0]}"/>`,
+ `<ellipse cx="100" cy="115" rx="${50+h%25}" ry="${40+h%20}" fill="${sh[2]}" opacity=".85"/><rect x="${a}" y="${b}" width="40" height="40" rx="20" fill="${sh[1]}" opacity=".1"/>`];
+ return `<svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${e(label||'Decorative illustration')}"><rect width="200" height="250" fill="${t}"/><circle cx="170" cy="30" r="60" fill="#fff" opacity=".2"/>${shapes[c]}</svg>`;
+}
+function artBox(seed,cat,label,badge){return `<div class="art">${badge?`<span class="badge">${e(badge)}</span>`:''}${art(seed,cat,label)}</div>`;}
+
+/* ---------- REUSABLE RENDERERS ---------- */
+function Disclosure(short){return short?`<p class="ph" style="margin:.2rem 0 0">We may earn a commission when you buy through links. <a href="#/affiliate-disclosure">Learn more</a>.</p>`:`<div class="disc" role="note"><strong>As an Amazon Associate I earn from qualifying purchases.</strong> Links marked “View on Amazon” are affiliate links; they cost you nothing extra. <a href="#/affiliate-disclosure">Affiliate Disclosure</a>.</div>`;}
+function PriceLine(p){const bits=[];if(p.rating!=null)bits.push('★ '+p.rating);if(p.price!=null)bits.push('$'+p.price);return bits.length?`<div class="price" style="font-style:normal">${e(bits.join(' · '))}</div>`:`<div class="price">Check current price on Amazon</div>`;}
+function AmazonCTA(p,cls){return `<a class="btn pri sm ${cls||''}" href="${e(affUrl(p.id))}" target="_blank" rel="sponsored nofollow noopener" aria-label="View ${e(p.title)} on Amazon (opens in a new tab, affiliate link)" data-track="amazon_click" data-id="${e(p.id)}">View on Amazon</a>`;}
+function ProductCard(p){
+ return `<article class="card">${artBox(p.id,p.category,p.title+' — sample illustration',p.badge)}<div class="body"><div class="cat">${e(catName(p.category))} · ${e(p.subcategory)}</div><h3><a href="#/product/${e(p.slug)}">${e(p.title)}</a></h3><p class="desc">${e(p.description)}</p>${PriceLine(p)}${p.placeholder?'<div class="ph">Sample placeholder product</div>':''}<div class="actions">${AmazonCTA(p)}<a class="btn sec2 sm" href="#/product/${e(p.slug)}" aria-label="Read more about ${e(p.title)}">Read More</a></div></div></article>`;
+}
+function CategoryCard(c){return `<a class="catcard" href="#/${c.key}" style="background:${c.tint}"><svg class="big" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#fff"/></svg><span class="eyebrow">Shop</span><h3>${e(c.name)}</h3><p>${e(c.tag)}</p></a>`;}
+function CollectionCard(c){return `<a class="colcard" href="#/collections/${e(c.slug)}"><div class="strip" style="background:${c.tint}"></div><h3>${e(c.title)}</h3><p>${e(c.desc)}</p><span class="link">Browse ${c.ids.length} finds →</span></a>`;}
+function ArticleCard(a){const cat=catName(a.category);return `<article class="card artcard">${artBox(a.slug,a.category,a.title+' — sample illustration')}<div class="body"><div class="cat">${e(a.type)} · ${e(cat)}</div><h3><a href="#/blog/${e(a.slug)}">${e(a.title)}</a></h3><p class="desc">${e(a.excerpt)}</p><div class="meta">${e(fmt(a.published))}</div><div class="actions"><a class="btn sec2 sm" href="#/blog/${e(a.slug)}" aria-label="Read more: ${e(a.title)}">Read More</a></div></div></article>`;}
+function Hero(){return `<section class="wrap hero"><div><span class="eyebrow">${e(SITE.tagline)}</span><h1>Better Finds for Everyday Life</h1><p class="lead">Discover curated fashion, beauty, workspace essentials, and pet products worth checking out.</p><div class="ctas"><a class="btn pri" href="#trending">Explore Top Picks</a><a class="btn sec2" href="#shop-cats">Shop by Category</a></div></div><div class="collage" aria-label="Collage of curated finds"><div class="art">${art('h1','fashion','Fashion illustration')}</div><div class="art">${art('h2','beauty','Beauty illustration')}</div><div class="art">${art('h3','office','Workspace illustration')}</div><div class="art">${art('h4','pets','Pets illustration')}</div></div></section>`;}
+function Breadcrumbs(items){return `<nav class="crumbs wrap" aria-label="Breadcrumb"><ol>${items.map((i,n)=>n===items.length-1?`<li aria-current="page">${e(i[0])}</li>`:`<li><a href="${e(i[1])}">${e(i[0])}</a></li>`).join('')}</ol></nav>`;}
+function Grid(list){return list.length?`<div class="grid p">${list.map(ProductCard).join('')}</div>`:`<div class="empty"><p><strong>More finds coming soon.</strong></p><p>We have not added picks here yet. Try another subcategory or <a href="#/search">search</a>.</p></div>`;}
+function SecHead(t,link,lt){return `<div class="sec-head"><h2>${e(t)}</h2>${link?`<a class="link" href="${e(link)}">${e(lt||'View all')} →</a>`:''}</div>`;}
+function sortPop(l){return l.slice().sort((a,b)=>b.popularity-a.popularity);}
+
+/* ---------- Search + Filters (listing component) ---------- */
+let F={cat:'',sub:'',type:'',feat:false,budget:false,sort:'pop',q:'',minRating:''},POOL=[],ARTPOOL=[];
+const hasPrice=PRODUCTS.some(p=>p.price!=null),hasRating=PRODUCTS.some(p=>p.rating!=null);
+function matches(p){
+ if(F.cat&&p.category!==F.cat)return false;
+ if(F.sub&&p.subcategory!==F.sub)return false;
+ if(F.type&&p.type!==F.type)return false;
+ if(F.feat&&!p.featured)return false;
+ if(F.budget&&!p.budgetPick)return false;
+ if(F.minRating&&(p.rating==null||p.rating<+F.minRating))return false;
+ if(F.q){const hay=(p.title+' '+p.description+' '+p.subcategory+' '+p.type+' '+catName(p.category)+' '+p.tags.join(' ')).toLowerCase();return F.q.toLowerCase().split(/\s+/).every(w=>hay.includes(w));}
+ return true;
+}
+function Filters(){
+ const types=[...new Set(POOL.map(p=>p.type))].sort();
+ const subs=F.cat?CATEGORIES[F.cat].subs:[...new Set(POOL.map(p=>p.subcategory))].sort();
+ const opt=(arr,v)=>arr.map(x=>`<option value="${e(x)}" ${x===v?'selected':''}>${e(x)}</option>`).join('');
+ return `<aside class="filters" id="filters" aria-label="Filters"><div style="display:flex;justify-content:space-between;align-items:center"><strong>Filters</strong><button class="iconbtn fclose" data-act="fclose" aria-label="Close filters"><i data-lucide="x" style="width:20px;height:20px"></i></button></div>
+ <label for="f-sub">Subcategory</label><select id="f-sub" data-f="sub"><option value="">All</option>${opt(subs,F.sub)}</select>
+ <label for="f-type">Product type</label><select id="f-type" data-f="type"><option value="">All</option>${opt(types,F.type)}</select>
+ <label for="f-sort">Sort by</label><select id="f-sort" data-f="sort"><option value="pop" ${F.sort==='pop'?'selected':''}>Popularity</option><option value="az" ${F.sort==='az'?'selected':''}>Title A–Z</option></select>
+ <label class="chk"><input type="checkbox" data-f="feat" ${F.feat?'checked':''}> Featured only</label>
+ <label class="chk"><input type="checkbox" data-f="budget" ${F.budget?'checked':''}> Budget picks only</label>
+ ${hasRating?`<label for="f-r">Minimum rating</label><select id="f-r" data-f="minRating"><option value="">Any</option><option value="4">4+</option></select>`:''}
+ ${hasPrice?`<p class="ph">Price filters appear where price data exists.</p>`:`<p class="ph">Price and rating filters appear once verified data is added.</p>`}
+ <button class="btn sec2 sm" data-act="freset" style="width:100%">Reset filters</button></aside>`;
+}
+function Listing(pool,opts){
+ opts=opts||{};POOL=pool;
+ const cats=Object.keys(CATEGORIES);
+ return `<div class="chips" role="group" aria-label="Filter by category"><button class="chip" data-cat="" aria-pressed="${!F.cat}">All</button>${cats.map(c=>`<button class="chip" data-cat="${c}" aria-pressed="${F.cat===c}">${e(CATEGORIES[c].name)}</button>`).join('')}</div>
+ <button class="btn sec2 sm fbtn" data-act="fopen" aria-controls="filters" style="margin-bottom:.8rem"><i data-lucide="sliders-horizontal" style="width:16px;height:16px"></i> More filters</button>
+ <div class="lay">${Filters()}<div><p id="count" aria-live="polite" class="ph"></p><div id="results"></div>${opts.articles?'<div id="artresults"></div>':''}</div></div>`;
+}
+function paintResults(){
+ const el=$('#results');if(!el)return;
+ let l=POOL.filter(matches);
+ l=F.sort==='az'?l.slice().sort((a,b)=>a.title.localeCompare(b.title)):sortPop(l);
+ el.innerHTML=Grid(l);
+ const c=$('#count');if(c)c.textContent=l.length+' find'+(l.length===1?'':'s')+' shown';
+ const ar=$('#artresults');
+ if(ar){const al=ARTPOOL.filter(a=>F.q&&(a.title+' '+a.excerpt+' '+a.type).toLowerCase().split(/\s/).length&&F.q.toLowerCase().split(/\s+/).every(w=>(a.title+' '+a.excerpt+' '+a.type+' '+a.category).toLowerCase().includes(w)));ar.innerHTML=al.length?`<div class="sec">${SecHead('Matching articles')}<div class="grid c3">${al.map(ArticleCard).join('')}</div></div>`:'';}
+ refreshIcons();
+}
+
+/* ---------- SEO ---------- */
+const ROUTE_PATH={fashion:'/fashion/',beauty:'/beauty/',office:'/office/',pets:'/pets/'};
+function setMeta(title,desc,path,ld){
+ const full=title+' | '+SITE.name;document.title=full;
+ const url=SITE.base+(path||'/');
+ const set=(sel,attr,val)=>{const n=document.querySelector(sel);if(n)n.setAttribute(attr,val);};
+ set('meta[name=description]','content',desc);set('link[rel=canonical]','href',url);
+ set('meta[property="og:title"]','content',full);set('meta[property="og:description"]','content',desc);set('meta[property="og:url"]','content',url);
+ set('meta[name="twitter:title"]','content',full);set('meta[name="twitter:description"]','content',desc);
+ let s=document.getElementById('ld');if(s)s.remove();
+ s=document.createElement('script');s.type='application/ld+json';s.id='ld';
+ const base=[{'@context':'https://schema.org','@type':'Organization',name:SITE.name,url:SITE.base+'/',slogan:SITE.tagline},{'@context':'https://schema.org','@type':'WebSite',name:SITE.name,url:SITE.base+'/',potentialAction:{'@type':'SearchAction',target:SITE.base+'/#/search?q={search_term_string}','query-input':'required name=search_term_string'}}];
+ s.textContent=JSON.stringify(base.concat(ld||[]));document.head.appendChild(s);
+}
+function crumbLD(items){return {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:items.map((i,n)=>({'@type':'ListItem',position:n+1,name:i[0],item:SITE.base+'/'+(i[1]||'').replace('#/','')}))};}
+function listLD(name,list){return {'@context':'https://schema.org','@type':'ItemList',name,itemListElement:list.map((p,n)=>({'@type':'ListItem',position:n+1,url:SITE.base+'/#/product/'+p.slug,name:p.title}))};}
+
+/* ---------- VIEWS ---------- */
+const NAV=[['Home','#/'],['Fashion','#/fashion'],['Beauty','#/beauty'],['Office','#/office'],['Pets','#/pets'],['Best Sellers','#/best-sellers'],['Budget Finds','#/budget-finds'],['Blog','#/blog'],['About','#/about']];
+const DISCOVER=[['Trending','#/trending'],['Best Sellers','#/best-sellers'],['Under $25 (Budget Finds)','#/budget-finds'],['Gift Ideas','#/gift-ideas'],['New Finds','#/new-finds'],['Collections','#/collections']];
+function DiscoverStrip(){return `<div class="wrap"><div class="eyebrow">Discover</div><div class="discover">${DISCOVER.map(d=>`<a href="${d[1]}">${e(d[0])}</a>`).join('')}</div></div>`;}
+
+function viewHome(){
+ const trending=sortPop(PRODUCTS).slice(0,8);
+ setMeta('Smart Finds for Everyday Life','Discover curated fashion, beauty, workspace essentials, and pet products worth checking out.','/',[listLD('Trending Right Now',trending)]);
+ return Hero()+DiscoverStrip()+
+ `<section class="wrap sec" id="shop-cats">${SecHead('Shop by Category')}<div class="grid c4">${Object.values(CATEGORIES).map(CategoryCard).join('')}</div></section>
+ <section class="band"><div class="wrap sec" id="trending">${SecHead('Trending Right Now','#/trending','See all trending')}<div class="grid p">${trending.map(ProductCard).join('')}</div>${Disclosure()}</div></section>
+ <section class="wrap sec">${SecHead('Collections','#/collections','All collections')}<div class="grid c3">${COLLECTIONS.slice(0,3).map(CollectionCard).join('')}</div></section>
+ <section class="band"><div class="wrap sec">${SecHead('Budget Finds','#/budget-finds','Under $25 finds')}<div class="grid p">${sortPop(PRODUCTS.filter(p=>p.budgetPick)).slice(0,4).map(ProductCard).join('')}</div></div></section>
+ <section class="wrap sec">${SecHead('From The Find Edit Journal','#/blog','Read the journal')}<div class="grid c3">${ARTICLES.slice(0,3).map(ArticleCard).join('')}</div></section>
+ <section class="wrap sec"><div class="box"><h2>How we pick</h2><p>We research and curate useful, stylish, interesting, and affordable products. We read listing details, compare features, and look at shopper feedback. <a href="#/about">Learn how selection works</a>.</p></div></section>`;
+}
+function viewCategory(key,q){
+ const c=CATEGORIES[key],all=PRODUCTS.filter(p=>p.category===key),sub=q.get('sub')||'';
+ const crumbs=[['Home','#/'],[c.name,'#/'+key]];
+ setMeta(c.name+(sub?' — '+sub:''),c.tag+' Curated '+c.name.toLowerCase()+' finds worth checking out.',ROUTE_PATH[key],[crumbLD(crumbs),listLD(c.name,all)]);
+ const arts=ARTICLES.filter(a=>a.category===key),guides=arts.filter(a=>/Guide|Best/.test(a.type)),rel=ARTICLES.filter(a=>a.category!==key).slice(0,3);
+ const subnav=`<div class="subnav" role="navigation" aria-label="${e(c.name)} subcategories"><a class="chip ${sub?'':'on'}" href="#/${key}">All</a>${c.subs.map(s=>`<a class="chip ${s===sub?'on':''}" href="#/${key}?sub=${encodeURIComponent(s)}">${e(s)}</a>`).join('')}</div>`;
+ let body;
+ if(sub){body=`<section class="wrap sec">${SecHead(sub)}${Grid(sortPop(all.filter(p=>p.subcategory===sub)))}</section>`;}
+ else{
+  const sect=(t,l)=>l.length?`<section class="wrap sec">${SecHead(t)}<div class="grid p">${l.map(ProductCard).join('')}</div></section>`:'';
+  body=sect('Featured',all.filter(p=>p.featured))+sect('Best Sellers',sortPop(all).slice(0,4))+sect('Budget Picks',all.filter(p=>p.budgetPick))+sect("Editor's Picks",all.filter(p=>p.badge==="Editor's Pick"||p.badge==='Top Pick'))+
+  `<section class="wrap sec">${SecHead('Buying Guides')}${guides.length?`<div class="grid c3">${guides.map(ArticleCard).join('')}</div>`:'<div class="empty">Buying guides for this department are coming soon.</div>'}</section>
+   <section class="wrap sec">${SecHead('Related Articles','#/blog','Journal')}<div class="grid c3">${(arts.length?arts:rel).concat(rel).slice(0,3).map(ArticleCard).join('')}</div></section>`;
+ }
+ return Breadcrumbs(crumbs)+`<section class="wrap"><div class="catband" style="background:${c.tint}"><span class="eyebrow">Department</span><h1>${e(c.name)}</h1><p>${e(c.tag)} Researched and curated finds for everyday life.</p>${subnav}</div>${Disclosure()}</section>`+body;
+}
+function crossView(title,desc,path,pool,intro){
+ F={cat:'',sub:'',type:'',feat:false,budget:false,sort:'pop',q:'',minRating:''};
+ const crumbs=[['Home','#/'],[title,'#'+path]];
+ setMeta(title,desc,path,[crumbLD(crumbs),listLD(title,pool)]);
+ return Breadcrumbs(crumbs)+`<section class="wrap pagehero"><span class="eyebrow">Discover</span><h1>${e(title)}</h1><p class="lead" style="max-width:38em">${e(intro)}</p>${Disclosure()}</section><section class="wrap">${Listing(pool)}</section>`;
+}
+function viewCollections(){
+ const crumbs=[['Home','#/'],['Collections','#/collections']];
+ setMeta('Collections','Seven curated collections: budget finds, work-from-home upgrades, beauty, pets, fashion and gifts.','/collections/',[crumbLD(crumbs)]);
+ return Breadcrumbs(crumbs)+`<section class="wrap pagehero"><h1>Collections</h1><p class="lead">Themed edits across all four departments.</p></section><section class="wrap"><div class="grid c3">${COLLECTIONS.map(CollectionCard).join('')}</div></section>`;
+}
+function viewCollection(slug){
+ const c=COLLECTIONS.find(x=>x.slug===slug);if(!c)return view404();
+ const list=c.ids.map(byId).filter(Boolean),crumbs=[['Home','#/'],['Collections','#/collections'],[c.title,'#/collections/'+slug]];
+ setMeta(c.title,c.desc,'/collections/'+slug+'/',[crumbLD(crumbs),listLD(c.title,list)]);
+ return Breadcrumbs(crumbs)+`<section class="wrap"><div class="catband" style="background:${c.tint}"><span class="eyebrow">Collection</span><h1>${e(c.title)}</h1><p>${e(c.desc)}</p></div>${Disclosure()}${Grid(list)}</section><section class="wrap sec">${SecHead('More collections')}<div class="grid c3">${COLLECTIONS.filter(x=>x.slug!==slug).slice(0,3).map(CollectionCard).join('')}</div></section>`;
+}
+function viewBlog(q){
+ const t=q.get('type')||'',list=ARTICLES.filter(a=>!t||a.type===t),crumbs=[['Home','#/'],['Blog','#/blog']];
+ setMeta('The Find Edit Journal','Buying guides, lists and gift ideas from The Find Edit Journal.','/blog/',[crumbLD(crumbs)]);
+ return Breadcrumbs(crumbs)+`<section class="wrap pagehero"><span class="eyebrow">Blog</span><h1>The Find Edit Journal</h1><p class="lead">Guides, lists and ideas for smart everyday shopping.</p><div class="subnav" aria-label="Article types"><a class="chip ${t?'':'on'}" href="#/blog">All</a>${JOURNAL_TYPES.map(x=>`<a class="chip ${x===t?'on':''}" href="#/blog?type=${encodeURIComponent(x)}">${e(x)}</a>`).join('')}</div></section><section class="wrap">${list.length?`<div class="grid c3">${list.map(ArticleCard).join('')}</div>`:'<div class="empty">No articles of this type yet. More are on the way.</div>'}</section>`;
+}
+function slugId(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
+function viewArticle(slug){
+ const a=ARTICLES.find(x=>x.slug===slug);if(!a)return view404();
+ const crumbs=[['Home','#/'],['Blog','#/blog'],[a.title,'#/blog/'+slug]],url=SITE.base+'/#/blog/'+slug;
+ setMeta(a.seoTitle,a.meta,'/blog/'+slug+'/',[crumbLD(crumbs),{'@context':'https://schema.org','@type':'Article',headline:a.title,description:a.meta,author:{'@type':'Organization',name:a.author},datePublished:a.published,dateModified:a.updated,mainEntityOfPage:url,publisher:{'@type':'Organization',name:SITE.name}}]);
+ const rel=ARTICLES.filter(x=>x.slug!==slug).slice(0,3),enc=encodeURIComponent(url),tt=encodeURIComponent(a.title);
+ const toc=a.sections.map(s=>`<li><a href="#/blog/${e(slug)}" data-scroll="${slugId(s.h)}">${e(s.h)}</a></li>`).join('');
+ const secs=a.sections.map((s,i)=>`<h2 id="${slugId(s.h)}">${e(s.h)}</h2><p>${e(s.p)}</p>${s.products.length?`<div class="grid c3" style="margin:1rem 0">${s.products.map(id=>ProductCard(byId(id))).join('')}</div>`:''}${i===0||i===2?`<div class="pin" aria-label="Pinterest image slot (2:3)"><div class="art">${art(slug+i,a.category,'Pinterest image slot')}</div><div class="cap">${e(s.h)}</div></div><a class="btn sec2 sm" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url=${enc}&description=${tt}" data-track="pin_save">Save to Pinterest</a>`:''}`).join('');
+ return Breadcrumbs(crumbs)+`<div class="wrap sec"><div class="artlay"><article class="prose"><span class="eyebrow">${e(a.type)} · ${e(catName(a.category))}</span><h1>${e(a.title)}</h1><p class="ph">By ${e(a.author)} · Published ${e(fmt(a.published))} · Updated ${e(fmt(a.updated))} · Slug: /blog/${e(slug)}/</p><div class="art" style="aspect-ratio:16/9;margin:1rem 0">${art(slug,a.category,'Featured image placeholder')}</div>${Disclosure()}<p>${e(a.intro)}</p><nav class="toc" aria-label="Table of contents"><strong>In this article</strong><ol>${toc}</ol></nav>${secs}<div class="share" aria-label="Share"><a class="btn sec2 sm" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=${enc}">Facebook</a><a class="btn sec2 sm" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=${enc}&text=${tt}">X</a><a class="btn sec2 sm" target="_blank" rel="noopener" href="https://www.pinterest.com/pin/create/button/?url=${enc}&description=${tt}">Pinterest</a><button class="btn sec2 sm" data-act="copy">Copy link</button></div>${Disclosure()}</article><aside><div class="box"><h3>Related posts</h3>${rel.map(r=>`<p><a href="#/blog/${e(r.slug)}">${e(r.title)}</a></p>`).join('')}</div></aside></div></div>`;
+}
+function list(arr){return arr.map(x=>`<li>${e(x)}</li>`).join('');}
+function viewProduct(slug){
+ const p=bySlug(slug);if(!p)return view404();
+ const c=CATEGORIES[p.category],crumbs=[['Home','#/'],[c.name,'#/'+p.category],[p.title,'#/product/'+slug]];
+ setMeta(p.title,p.description,'/product/'+slug+'/',[crumbLD(crumbs),{'@context':'https://schema.org','@type':'Product',name:p.title,description:p.description,category:c.name}]);
+ const alts=PRODUCTS.filter(x=>x.id!==p.id&&x.category===p.category).slice(0,3),rel=PRODUCTS.filter(x=>x.id!==p.id&&x.subcategory===p.subcategory||x.id!==p.id&&x.type===p.type).slice(0,4);
+ return Breadcrumbs(crumbs)+`<div class="wrap sec"><div class="pd"><div class="art">${p.badge?`<span class="badge">${e(p.badge)}</span>`:''}${art(p.id,p.category,p.title+' — sample illustration')}</div><div><span class="eyebrow">${e(c.name)} · ${e(p.subcategory)}</span><h1>${e(p.title)}</h1><p>${e(p.description)}</p>${PriceLine(p)}${p.placeholder?'<p class="ph">Sample placeholder product — replace with a real listing before launch.</p>':''}<div class="ctas" style="margin:1rem 0">${AmazonCTA(p)}<a class="btn sec2 sm" href="#/${p.category}">More in ${e(c.nav)}</a></div>${Disclosure(true)}<h2 style="margin-top:1.4rem;font-size:1.4rem">Summary</h2><p>Our research suggests this ${e(p.type.toLowerCase())} is a reasonable fit for people looking for: ${e(p.bestFor.toLowerCase())}. We have not tested it hands-on.</p></div></div>
+ <div class="cols2" style="margin-top:1.6rem"><div class="box"><h3>Why we picked it</h3><p>Our research suggests it combines a useful feature set with broad appeal in its category. Verify details on the Amazon listing.</p></div><div class="box"><h3>Best for</h3><p>${e(p.bestFor)}.</p></div><div class="box"><h3>Features</h3><ul><li>${e(p.description)}</li><li>Type: ${e(p.type)}</li><li>Subcategory: ${e(p.subcategory)}</li></ul></div><div class="box"><h3>Who should buy</h3><p>Shoppers who want ${e(p.bestFor.toLowerCase())} and who have confirmed the specs match their needs.</p></div><div class="box"><h3>Pros</h3><ul>${list(p.pros)}</ul></div><div class="box"><h3>Cons</h3><ul>${list(p.cons)}</ul></div></div>
+ <div class="box" style="margin-top:1rem"><h3>Things to consider</h3><p>Check size, materials, compatibility, and the latest reviews on Amazon. Prices, availability and details change; we do not display them here.</p></div>
+ <section class="sec">${SecHead('Alternatives')}<div class="grid p">${alts.map(ProductCard).join('')}</div></section>
+ <section>${SecHead('FAQ')}${p.faq.map(f=>`<details><summary>${e(f[0])}</summary><p>${e(f[1])}</p></details>`).join('')}</section>
+ <section class="sec">${SecHead('Related finds')}<div class="grid p">${rel.map(ProductCard).join('')}</div></section><div class="ctas">${AmazonCTA(p)}</div>${Disclosure()}</div>`;
+}
+function page(title,desc,path,html,crumbName){const cr=[['Home','#/'],[crumbName||title,'#'+path]];setMeta(title,desc,path,[crumbLD(cr)]);return Breadcrumbs(cr)+`<div class="wrap sec"><div class="prose">${html}</div></div>`;}
+function viewAbout(){return page('About','We research and curate useful, stylish, interesting, and affordable products across fashion, beauty, workspaces, and pets.','/about/',`<h1>About The Find Edit</h1><p class="lead">We research and curate useful, stylish, interesting, and affordable products across fashion, beauty, workspaces, and pets.</p><h2>How selection works</h2><p>We browse product listings, compare features and descriptions, and look at what shoppers say on Amazon. We then curate the ones that look useful and fairly priced for everyday life. Our products are researched and curated — we do not claim hands-on testing, and wording like “our research suggests” reflects that.</p><h2>How the site is supported</h2><p>The Find Edit is an Amazon affiliate site. When you click “View on Amazon” and buy, we may earn a small commission at no extra cost to you. This does not change what we list, but you should know it. Read our <a href="#/affiliate-disclosure">Affiliate Disclosure</a>.</p><h2>What we don’t do</h2><p>We don’t invent prices, ratings, reviews or discounts. Where data is unverified, we send you to Amazon to check the current details.</p>`);}
+function viewDisclosure(){return page('Affiliate Disclosure','How The Find Edit earns from qualifying purchases as an Amazon Associate.','/affiliate-disclosure/',`<h1>Affiliate Disclosure</h1><p><strong>As an Amazon Associate I earn from qualifying purchases.</strong></p><p>Links on this site to Amazon are affiliate links. If you click and buy, we may earn a commission at no extra cost to you. Prices, availability and product details are set by Amazon and sellers and may change; always confirm them on the listing.</p><p>We aim to feature products we have researched and curated, and we do not claim to have tested them ourselves.</p>`);}
+function viewPrivacy(){return page('Privacy Policy','Sample privacy policy for The Find Edit (draft for legal review).','/privacy/',`<div class="disc">Sample copy — flagged for legal review before launch.</div><h1>Privacy Policy</h1><p>This site does not set cookies or use third-party trackers in its current form. Our contact form is not connected to a backend, and nothing you type is stored. If you click an Amazon link, Amazon’s own privacy policy applies on their site.</p><p>If analytics are added later, we will prefer privacy-friendly options and update this page.</p>`);}
+function viewTerms(){return page('Terms','Sample terms of use for The Find Edit (draft for legal review).','/terms/',`<div class="disc">Sample copy — flagged for legal review before launch.</div><h1>Terms of Use</h1><p>Content is provided for general information. Product details, prices and availability change; confirm them with Amazon. We are not responsible for third-party sites. Product names and trademarks belong to their owners.</p>`);}
+function viewContact(){return page('Contact','Contact The Find Edit.','/contact/',`<h1>Contact</h1><div class="disc">This form has no backend yet: messages are not sent or stored. Connect a form service before launch.</div><form class="contact" id="cform"><label>Name<input required autocomplete="name"></label><label>Email<input type="email" required autocomplete="email"></label><label>Topic<select><option>General question</option><option>Product suggestion</option><option>Partnership</option></select></label><label>Message<textarea rows="5" required></textarea></label><button class="btn pri" type="submit">Send message</button><p id="cmsg" role="status" class="ph"></p></form>`);}
+function viewLaunch(){
+ const paths=['/','/fashion/','/beauty/','/office/','/pets/','/best-sellers/','/budget-finds/','/trending/','/gift-ideas/','/new-finds/','/collections/'].concat(COLLECTIONS.map(c=>'/collections/'+c.slug+'/'),['/blog/'],ARTICLES.map(a=>'/blog/'+a.slug+'/'),PRODUCTS.map(p=>'/product/'+p.slug+'/'),['/about/','/contact/','/affiliate-disclosure/','/privacy/','/terms/']);
+ const sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+paths.map(p=>'  <url><loc>'+SITE.base+p+'</loc></url>').join('\n')+'\n</urlset>';
+ const rb='User-agent: *\nAllow: /\nSitemap: '+SITE.base+'/sitemap.xml';
+ return page('Launch notes','Launch checklist, sitemap.xml and robots.txt for The Find Edit.','/launch-notes/',`<h1>Launch notes</h1><ul><li>Hash routes (#/fashion) map to clean paths (/fashion/). Configure server rewrites or pre-render for crawlers.</li><li>Replace SITE.base, AFFILIATE_TAG, and each AFFILIATE_LINKS entry.</li><li>Replace placeholder products and add verified data only.</li><li>Legal review for Privacy and Terms; add a form backend.</li><li>Traffic targets: Google, Pinterest, Instagram, Facebook, direct.</li></ul><h2>sitemap.xml</h2><pre>${e(sm)}</pre><h2>robots.txt</h2><pre>${e(rb)}</pre>`);
+}
+function view404(){setMeta('Page not found','That page could not be found.','/404/');return `<div class="wrap sec"><div class="empty"><h1>Page not found</h1><p><a class="btn pri" href="#/">Back to home</a></p></div></div>`;}
+function viewSearch(q){
+ const term=(q.get('q')||'').trim();
+ F={cat:'',sub:'',type:'',feat:false,budget:false,sort:'pop',q:term,minRating:''};ARTPOOL=ARTICLES;
+ setMeta(term?'Search: '+term:'Search','Search products and articles on The Find Edit.','/search/');
+ return Breadcrumbs([['Home','#/'],['Search','#/search']])+`<section class="wrap pagehero"><h1>${term?'Results for “'+e(term)+'”':'Search'}</h1></section><section class="wrap">${Listing(PRODUCTS,{articles:true})}</section>`;
+}
+
+/* ---------- ROUTER ---------- */
+function route(){
+ const h=location.hash.slice(1)||'/';const [path,qs]=h.split('?');const q=new URLSearchParams(qs||'');const seg=path.split('/').filter(Boolean);
+ F={cat:'',sub:'',type:'',feat:false,budget:false,sort:'pop',q:'',minRating:''};ARTPOOL=[];
+ let html;const k=seg[0];
+ if(!k)html=viewHome();
+ else if(CATEGORIES[k])html=viewCategory(k,q);
+ else if(k==='best-sellers')html=crossView('Best Sellers','Our most popular finds across fashion, beauty, office and pets.','/best-sellers/',sortPop(PRODUCTS),'Popular picks across every department, ordered by our popularity score.');
+ else if(k==='budget-finds')html=crossView('Budget Finds','Under $25 finds across categories. Check current prices on Amazon.','/budget-finds/',PRODUCTS.filter(p=>p.budgetPick),'Budget-minded finds across all four departments. Prices change, so check the current price on Amazon.');
+ else if(k==='trending')html=crossView('Trending','Trending finds right now.','/trending/',PRODUCTS.filter(p=>p.tags.includes('trending')||p.badge==='Trending'),'What shoppers are gravitating to right now.');
+ else if(k==='gift-ideas')html=crossView('Gift Ideas','Gift-worthy finds across categories.','/gift-ideas/',PRODUCTS.filter(p=>p.tags.includes('gift')||p.badge==='Gift Idea'),'Giftable picks for friends, family and yourself.');
+ else if(k==='new-finds')html=crossView('New Finds','Newly added finds.','/new-finds/',PRODUCTS.filter(p=>p.tags.includes('new')),'Our most recent additions.');
+ else if(k==='collections')html=seg[1]?viewCollection(seg[1]):viewCollections();
+ else if(k==='blog')html=seg[1]?viewArticle(seg[1]):viewBlog(q);
+ else if(k==='product')html=viewProduct(seg[1]);
+ else if(k==='about')html=viewAbout();
+ else if(k==='contact')html=viewContact();
+ else if(k==='affiliate-disclosure')html=viewDisclosure();
+ else if(k==='privacy')html=viewPrivacy();
+ else if(k==='terms')html=viewTerms();
+ else if(k==='launch-notes')html=viewLaunch();
+ else if(k==='search')html=viewSearch(q);
+ else html=view404();
+ $('#main').innerHTML=html;
+ if(k==='best-sellers'||k==='budget-finds'||k==='trending'||k==='gift-ideas'||k==='new-finds'||k==='search')paintResults();
+ document.querySelectorAll('nav.main a,#mobnav a').forEach(a=>{const on=a.getAttribute('href')==='#/'+(k||'');if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ $('#mobnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');
+ if(!location.hash.includes('#',1)||true){window.scrollTo(0,0);}
+ refreshIcons();trackEvent('page_view',{path});
+}
+function refreshIcons(){if(typeof lucide!=='undefined'&&typeof lucide.createIcons==='function'){try{lucide.createIcons();}catch(_){}}}
+function toast(m){const t=document.createElement('div');t.className='toast';t.setAttribute('role','status');t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
+
+/* ---------- Events ---------- */
+$('#navMain').innerHTML=NAV.map(n=>`<a href="${n[1]}">${n[0]}</a>`).join('');
+$('#mobnav').innerHTML=NAV.map(n=>`<a href="${n[1]}">${n[0]}</a>`).join('');
+$('#menuBtn').addEventListener('click',()=>{const m=$('#mobnav'),o=m.classList.toggle('open');$('#menuBtn').setAttribute('aria-expanded',o);$('#menuBtn').setAttribute('aria-label',o?'Close menu':'Open menu');});
+$('#sform').addEventListener('submit',ev=>{ev.preventDefault();const v=$('#sq').value.trim();trackEvent('search',{len:v.length});location.hash='#/search?q='+encodeURIComponent(v);});
+function drawer(open){const f=$('#filters'),s=$('#scrim');if(f)f.classList.toggle('open',open);s.classList.toggle('open',open);}
+$('#scrim').addEventListener('click',()=>drawer(false));
+document.addEventListener('click',ev=>{
+ const t=ev.target.closest('[data-cat],[data-act],[data-track],[data-scroll],a[href^="#trending"],a[href^="#shop-cats"]');if(!t)return;
+ if(t.dataset.track){trackEvent(t.dataset.track,{id:t.dataset.id||''});return;}
+ const href=t.getAttribute('href');
+ if(href==='#trending'||href==='#shop-cats'){ev.preventDefault();const el=document.getElementById(href.slice(1));if(el)el.scrollIntoView({behavior:'smooth'});return;}
+ if(t.dataset.scroll){ev.preventDefault();const el=document.getElementById(t.dataset.scroll);if(el)el.scrollIntoView({behavior:'smooth'});return;}
+ if(t.dataset.cat!==undefined&&t.classList.contains('chip')){F.cat=t.dataset.cat;F.sub='';document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cat===F.cat));const old=$('#filters');if(old){old.outerHTML=Filters();}paintResults();return;}
+ const a=t.dataset.act;
+ if(a==='fopen')drawer(true);
+ else if(a==='fclose')drawer(false);
+ else if(a==='freset'){const q=F.q;F={cat:'',sub:'',type:'',feat:false,budget:false,sort:'pop',q:q,minRating:''};document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cat===''));$('#filters').outerHTML=Filters();paintResults();refreshIcons();}
+ else if(a==='copy'){const u=location.href;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(()=>toast('Link copied'),()=>toast('Copy not available'));}else toast('Copy not available');}
+});
+document.addEventListener('change',ev=>{
+ const t=ev.target.closest('[data-f]');if(!t)return;const k=t.dataset.f;F[k]=t.type==='checkbox'?t.checked:t.value;paintResults();
+});
+document.addEventListener('submit',ev=>{
+ if(ev.target.id==='cform'){ev.preventDefault();$('#cmsg').textContent='Thanks! (Demo only — no backend is connected, so nothing was sent or stored.)';ev.target.reset();}
+});
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape')drawer(false);});
+window.addEventListener('hashchange',route);
+route();
+refreshIcons();
+</script></body></html>
